@@ -4,11 +4,20 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MaintenanceMonitorController {
     private final MaintenanceMessage maintenanceMessage = new MaintenanceMessage("Everything works as expected", false);
+
+
+    @GetMapping("/api/message/set")
+    public String _setMessage(@RequestParam(value = "m") String m) {
+        maintenanceMessage.setMessage(m);
+        maintenanceMessage.setAlarm(!m.equals("Everything works as expected"));
+        return "ok";
+    }
 
     @GetMapping(value = "/api/message", produces = MediaType.TEXT_HTML_VALUE)
     public ResponseEntity<String> _showMessage() {
