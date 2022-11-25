@@ -8,8 +8,15 @@ public class MaintenanceMessage {
         this.alarm = alarm;
     }
 
+    public boolean isAlarm() {
+        return alarm;
+    }
+
     public void setMessage(String message) {
         this.message = message;
+    }
+    public String getMessage() {
+        return message;
     }
 
     public MaintenanceMessage(String message, boolean alarm) {
