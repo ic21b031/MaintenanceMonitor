@@ -11,6 +11,12 @@ A team of max 3 members should implement a REST-based application in Java (using
 * reset the message
 using its API.
 
+## Team members
+
+* Lukas Müllner (ic21b031)
+* Roman Wüger (ic21b107)
+* Peter Rieder (ic21b074)
+
 ## Requirements
 Use GitHub for the project and follow the correct DevOps procedure. Use a Kanban board to manage your User Stories and use a git branching model (preferable gitflow) to manage your code. Track your development process by updating your Kanban board and write at least one unit tests for every requirement. A Continuous Integration pipeline that produces the finished software artifact should be implemented as well.
 
